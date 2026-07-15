@@ -1,0 +1,342 @@
+ACESSILIA – Padrão Técnico de Descrição Semântica
+Versão 1.0 – Draft
+
+1. INTRODUÇÃO
+Este padrão foi desenvolvido para ser utilizado em conjunto com as WCAG 2.2, fornecendo critérios específicos para a elaboração de descrições semânticas de conteúdos visuais. O objetivo é assegurar que as descrições sejam objetivas, reproduzíveis, verificáveis, consistentes, livres de vieses desnecessários e compatíveis com revisão humana e automatizada.
+
+2. ESCOPO
+Aplica‑se à produção de descrições semânticas de imagens, fotografias, gráficos, diagramas, tabelas, mapas, ilustrações, documentos digitais e demais conteúdos visuais quando a acessibilidade exija uma representação textual. Não cobre:
+- Audiodescrição cinematográfica;
+- Legendagem;
+- Tradução;
+- Descrição artística ou literária.
+
+3. DECLARAÇÃO DE CONFORMIDADE
+Uma implementação está em conformidade com este padrão quando atende integralmente aos critérios do nível de conformidade declarado (ACESSILIA‑A, ACESSILIA‑AA ou ACESSILIA‑AAA).
+
+4. LINGUAGEM NORMATIVA
+As palavras DEVE, NÃO DEVE, DEVERIA e PODE, quando escritas em letras maiúsculas, devem ser interpretadas conforme a RFC 2119 e a RFC 8174:
+- **DEVE** – o requisito é obrigatório;
+- **NÃO DEVE** – o requisito é proibido;
+- **DEVERIA** – o requisito é recomendado;
+- **PODE** – o requisito é opcional.
+
+5. REFERÊNCIAS
+5.1 Referências Normativas
+- WCAG 2.2
+- WAI‑ARIA 1.2
+- HTML‑AAM
+- Core‑AAM
+- EPUB Accessibility 1.1
+- EN 301‑549
+- ISO 9241‑171
+- PDF/UA (ISO 14289)
+
+5.2 Referências Informativas
+- DAISY Knowledge Base
+- ADLAB PRO Audio‑Description Guidelines
+- Outros trabalhos científicos
+
+6. GLOSSÁRIO
+**Descrição semântica** – Representação textual estruturada que comunica o significado observável de um conteúdo visual para fins de acessibilidade.
+**Conteúdo visual** – Qualquer material cuja informação pode ser obtida por observação visual (imagens, gráficos, diagramas, textos, etc.).
+**Observável** – Característica presente no conteúdo original que pode ser identificada diretamente, sem necessidade de interpretação, inferência ou conhecimento externo.
+**Evidência** – Característica ou elemento diretamente observável que sustenta a afirmação.
+**Evidência insuficiente** – Situação em que o conteúdo visual não fornece elementos suficientes para confirmar uma característica ou afirmação.
+
+**Confidence** – Valor numérico entre 0 e 1 que representa a confiança atribuída pelo sistema gerador quanto à completude e fidelidade da descrição produzida; não representa qualidade absoluta nem substitui revisão humana.
+
+**reviewStatus** – Estado da revisão, aceitação válida: draft | reviewed | approved | rejected | deprecated.**Inferência** – Informação adicionada sem evidência explícita no conteúdo.
+**Hipótese** – Interpretação baseada em probabilidade, mas não confirmada.
+**Observação** – Registro das observações feitas durante a coleta de dados.
+**Interpretação** – Explicação ou atribuição de significado ao conteúdo, não abrangida por este padrão.
+**Objetividade** – Grau de neutralidade e factualidade em relação ao conteúdo observado.
+**Contexto do conteúdo** – Finalidade para a qual a descrição será produzida.
+**Contexto visual** – Informações presentes no próprio conteúdo.
+**Descrição decorativa** – Descrição de elementos que não são essenciais ao entendimento do conteúdo, mas podem enriquecer a estética.
+**Descrição funcional** – Descrição voltada para a compreensão do uso ou funcionalidade do conteúdo.
+**Descrição técnica** – Descrição que detalha propriedades técnicas relevantes ao conteúdo.
+**Conformidade** – Estado de atendimento integral às exigências de um padrão.
+**Rastreabilidade** – Capacidade de traçar a origem e evolução de uma descrição.
+**Revisão humana** – Processo de avaliação e validação conduzido por especialistas humanos.
+**Revisão automatizada** – Processos de validação conduzidos por software ou IA.
+
+7. PRINCÍPIOS
+A) Objetividade – Neutralidade, Fidelidade, Ausência de Inferência, Verificabilidade.
+B) Clareza – Clareza, Precisão, Consistência, Terminologia.
+C) Contexto – Contextualização, Proporcionalidade.
+D) Ética – Privacidade, Segurança, Não discriminação, Transparência.
+
+8. DIRETRIZES
+A) A descrição DEVE observar apenas o que pode ser comprovado. Não incluir juízo de valor.
+B) Cada frase deve conter apenas uma ideia principal. Preferir voz ativa.
+C) As informações devem ser organizadas do mais importante para o menos importante.
+D) A descrição DEVE respeitar privacidade e evitar estereótipos.
+
+9. CRITÉRIOS DE CONFORMIDADE
+**PT-OBJ-01**
+
+NORMATIVO
+
+Requisito: A descrição **NÃO DEVE** conter informações sem evidência observável.
+
+────────────────────
+
+INFORMATIVO
+
+Objetivo: Garantir fidelidade ao conteúdo.
+Justificativa: Inferir variáveis sem evidências reduz a confiabilidade e dificulta auditorias.
+Métodos de avaliação:
+- Revisão humana
+- Checklist
+- IA
+Técnicas suficientes:
+- Use verbos observáveis
+- Indique incerteza
+- Não infira profissão
+Técnicas recomendadas:
+- Ordem espacial consistente
+- Frases curtas
+- Evite voz passiva
+Exemplo conforme: Pessoa sentada em uma cadeira.
+Exemplo não conforme: Pessoa esperando alguém.
+Falhas comuns:
+- Inferir profissão
+- Inferir intenção
+- Inferir relacionamento
+
+**PT-OBJ-02**
+Título: Ausência de Emotividade
+Requisito: A descrição **NÃO DEVE** inferir emoções não observáveis.
+Objetivo: Evitar interpretações subjetivas.
+Severidade: Crítica
+Métodos de avaliação: • Revisão humana • Checklist • IA
+Exemplo conforme: Pessoa sorrindo mostrando os dentes.
+Exemplo não conforme: Pessoa parecendo feliz.
+Falhas comuns: • Inferir humor • Inferir estresse
+
+**PT-OBJ-03**
+Título: Ausência de Inferência de Identidade
+Requisito: A descrição **NÃO DEVE** migrar atributos de identidade (raça, classe, gênero) sem evidência.
+Objetivo: Manter neutralidade quanto a identidade.
+Severidade: Grave
+Métodos de avaliação: • Revisão humana • Checklist • IA
+Exemplo conforme: Pessoa usando jaleco branco e estetoscópio.
+Exemplo não conforme: Médico examinando paciente.
+Falhas comuns: • Inferir profissão • Inferir status socioeconômico
+
+... (Demais critérios 9.4 ‑ 9.12 seguem o mesmo modelo, com identificadores PT‑CLA‑... PT‑CON‑... PT‑ETI‑... PT‑PRF‑02)
+
+10. NÍVEIS DE CONFORMIDADE
+- **ACESSILIA‑A** – Todos os critérios obrigatórios (PT‑OBJ‑01 ‑ PT‑CLA‑05).
+- **ACESSILIA‑AA** – PT‑OBJ‑01 ‑ PT‑CON‑07.
+- **ACESSILIA‑AAA** – Todos os critérios (PT‑OBJ‑01 ‑ PT‑PRF‑02).
+
+**CONFORMIDADE PARCIAL**
+Implementações que não atendam integralmente ao nível declarado NÃO DEVEM declarar conformidade.
+Podem informar os critérios implementados individualmente para fins de avaliação técnica.
+
+11. REQUISITOS PARA IA
+O sistema **DEVE**:
+- Separar observação, inferência e hipóteses; // sistema deve distinguir explicitamente fatos observados, hipóteses e informações ausentes
+- Indicar incerteza quando necessário;
+- Nunca inventar texto ilegível;
+- Manter rastreabilidade da descrição;
+- Registrar versão do modelo, data de geração e identificador da descrição;
+- Registrar versão do padrão utilizada;
+- Permitir revisão humana.
+
+12. PROCESSO DE DECISÃO
+Em caso de conflito entre princípios, a ordem de prioridade é:
+1. Fidelidade
+2. Neutralidade
+3. Clareza
+4. Contextualização
+5. Estilo
+
+13. NÃO OBJETIVOS
+Este padrão não pretende:
+- Substituir especialistas humanos;
+- Avaliar qualidade artística;
+- Determinar intenção do autor;
+- Interpretar significado cultural;
+- Substituir normas de acessibilidade existentes.
+
+14. FALHAS COMUNS
+- Afirmar que uma pessoa está triste apenas por olhar para baixo;
+- Inferir essência sem expressões faciais;
+- Descrever emoção sem evidência.
+
+15. EXEMPLOS
+Exemplo 1 – Imagem de mesa
+Conforme: “Mesa de madeira com quatro cadeiras.”
+Não conforme: “Mesa elegante com quatro cadeiras.”
+
+16. METADADOS DA DESCRIÇÃO
+
+**Campos obrigatórios**
+- id
+- description
+- language
+- standard
+- date
+- reviewStatus
+
+{
+  "id": "uuid",
+  "description": "...",
+  "language": "pt-BR",
+  "model": "...",
+  "modelVersion": "...",
+  "standard": "ACESSILIA 1.0",
+  "reviewStatus": "draft",
+  "reviewer": "...",
+  "date": "...",
+  "confidence": 0.94,
+  "uncertainty": [
+    "Texto parcialmente ilegível",
+    "Pessoa parcialmente oculta"
+  ],
+  "limitations": [
+    "Resolução insuficiente para leitura do texto"
+  ]
+}
+
+17. MODELO DE CONFORMIDADE
+Sistema: ACESSILIA API
+Versão: 1.3
+Conformidade: ACESSILIA‑AA
+Método: Revisão humana + IA
+Data: 2026‑07‑13
+Versão do padrão: 1.0
+
+18. ANEXOS
+Anexo A – Checklist
+Anexo B – Revisão Humana
+Anexo C – Fotografias
+Anexo D – Gráficos
+Anexo E – Diagramas
+Anexo F – Tabelas
+Anexo G – Mapas
+Anexo H – Fluxogramas
+Anexo I – Equações
+Anexo J – Capturas de Tela
+
+**MODELO DE QUALIDADE**
+Uma descrição será avaliada em seis dimensões, cada uma pontuada de 0 a 100:
+- Fidelidade – Correspondência entre descrição e conteúdo observado.
+- Clareza – Facilidade de compreensão do texto.
+- Cobertura – Grau em que os elementos relevantes foram descritos.
+- Objetividade – Ausência de julgamentos e inferências.
+- Consistência – Uso uniforme de terminologia e estrutura.
+- Rastreabilidade – Possibilidade de identificar origem, revisão e versão da descrição.
+
+**CASOS ESPECIAIS**
+Conteúdo Ambíguo:
+- Imagem desfocada
+- Imagem parcialmente cortada
+- Objeto oculto
+- Fotografia artística
+- Imagem sintética
+- Imagem gerada por IA
+- Deepfake
+
+**HIERARQUIA DE CRITÉRIOS**
+- Princípio
+- Diretriz
+- Critério
+- Método
+- Técnica
+- Falha
+- Exemplo
+
+19. LICENÇA
+Este documento pode ser utilizado gratuitamente para implementação, pesquisa e ensino, mantendo referência ao projeto ACESSILIA.
+
+**VERSIONAMENTO**
+- **Versão Maior (X.0)** – Alterações incompatíveis.
+- **Versão Menor (1.X)** – Novos critérios compatíveis.
+- **Patch (1.0.X)** – Correções editoriais.
+
+**PROCESSO DE EVOLUÇÃO**
+- Draft
+- Working Draft
+- Candidate Specification
+- Recommendation
+
+**ESCOPO NORMATIVO**
+As seções classificadas como "Normativas" definem requisitos obrigatórios para conformidade.
+As seções classificadas como "Informativas" fornecem explicações, exemplos, justificativas e recomendações, não sendo utilizadas para determinação de conformidade.
+
+**CONFORMIDADE POR CRITÉRIO**
+Cada critério informa:
+- Tipo: Obrigatório / Opcional
+- Conformidade: Obrigatória para A / AA / AAA
+
+**MATRIZ DE RASTREABILIDADE**
+| Critério | Princípio | Diretriz | Método |
+| -------- | -------- | -------- | ------- |
+| PT-OBJ-01 | Objetividade | D1 | Revisão humana |
+| PT-OBJ-02 | Objetividade | D1 | IA |
+| PT-CLA-01 | Clareza | D2 | Checklist |
+
+**MODELO FORMAL DE AVALIAÇÃO**
+Pontuação final = (Fidelidade × 0,30) + (Objetividade × 0,25) + (Cobertura × 0,15) + (Clareza × 0,15) + (Consistência × 0,10) + (Rastreabilidade × 0,05)
+
+**MODELO DE VALIDAÇÃO AUTOMÁTICA**
+Entrada → Pré-processamento → Identificação de elementos → Aplicação dos critérios PT-* → Resultado:
+{ conformance: AA, erros: [...], avisos: [...] }
+
+**CATÁLOGO DE TÉCNICAS**
+Técnica T-001: Descrição espacial; Aplicável a Fotografias; Suficiente para PT-OBJ-01, PT-CON-01
+T-002: Descrição hierárquica
+T-003: Descrição funcional
+T-004: Descrição estrutural
+
+**CATÁLOGO DE FALHAS**
+F-001: Inferir profissão; Relacionado: PT-OBJ-01; Severidade: Crítica
+
+**REQUISITOS DE INTEROPERABILIDADE**
+DEVEM exportar descrições em UTF-8.
+DEVEM utilizar identificadores únicos.
+DEVEM aceitar BCP47.
+DEVEM registrar timezone em ISO8601.
+DEVEM preservar metadados.
+
+**MODELO DE EXTENSÃO**
+Este padrão pode ser estendido por perfis: ACESSILIA-Photo, ACESSILIA-Math, ACESSILIA-Chart, ACESSILIA-Screen, ACESSILIA-STEM
+
+**REGISTRO OFICIAL DE IDENTIFICADORES**
+Sintaxe: PT-<Área>-<Número>
+Exemplos: PT-OBJ-01, PT-CLA-03, PT-CON-02, PT-ETI-01, PT-PRF-01
+
+INTEROPERABILIDADE
+O padrão define metadados compatíveis com:
+- **Compatibilidade obrigatória**
+- EPUB (EPUB 3 metadata)
+- HTML (meta tags `name="description"` e `itemprop="description"`)
+- PDF/UA (structure tree description)
+- JSON (padrão abaixo)
+
+- **Compatibilidade informativa**
+- Markdown
+- DOCX
+- ODF
+- ONIX
+- DAISY
+- Schema.org
+- APIs REST (expondo endpoint `/descriptions/{id}`)
+
+METADADOS DE SAÍDA
+O formato JSON padronizado para descrição:
+{
+  "description": "string",
+  "language": "BCP47",
+  "model": "string",
+  "modelVersion": "string",
+  "standard": "string",
+  "reviewed": "boolean",
+  "reviewer": "string|null",
+  "date": "ISO8601",
+  "confidence": "number"
+}

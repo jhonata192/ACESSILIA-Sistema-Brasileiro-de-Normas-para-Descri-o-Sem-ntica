@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://acessilia.org/schema"
+           xmlns="http://acessilia.org/schema"
+           elementFormDefault="qualified">
+  <xs:element name="Description" type="xs:string"/>
+  <xs:element name="Language" type="xs:string"/>
+  <xs:element name="Model" type="xs:string"/>
+  <xs:element name="ModelVersion" type="xs:string"/>
+  <xs:element name="Standard" type="xs:string"/>
+  <xs:element name="ReviewStatus" type="ReviewStatusEnum"/>
+  <xs:element name="Reviewer" type="xs:string" minOccurs="0"/>
+  <xs:element name="Date" type="xs:dateTime"/>
+  <xs:element name="Confidence" type="xs:decimal"/>
+  <xs:element name="Uncertainty" type="xs:string" maxOccurs="unbounded"/>
+  <xs:element name="Limitations" type="xs:string" maxOccurs="unbounded"/>
+  <xs:element name="AuditTrail" minOccurs="0">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Entry" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Timestamp" type="xs:dateTime"/>
+              <xs:element name="Change" type="xs:string"/>
+              <xs:element name="By" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="ReviewStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="draft"/>
+      <xs:enumeration value="reviewed"/>
+      <xs:enumeration value="approved"/>
+      <xs:enumeration value="rejected"/>
+      <xs:enumeration value="deprecated"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

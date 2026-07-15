@@ -1,0 +1,11 @@
+# ACESSILIA‑800 – Perfis de Acessibilidade e Metadados
+profiles:
+  - id: ACL-PRF-001
+    name: "Accessibility Profile - Livro Digital"
+    mediaTypes:
+      - application/epub+zip
+      - application/pdf
+    requiredMetadata:
+      - title
+      - language
+      - description

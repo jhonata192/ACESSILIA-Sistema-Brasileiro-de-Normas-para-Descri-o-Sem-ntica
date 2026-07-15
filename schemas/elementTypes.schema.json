@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ACESSILIA – Element Types Schema",
+  "description": "Taxonomia de tipos de elementos de descrição para validação automática.",
+  "type": "object",
+  "properties": {
+    "ImageDescription": {"type": "string"},
+    "ChartDescription": {"type": "string"},
+    "MathExpression": {"type": "string"},
+    "DocumentStructure": {"type": "string"},
+    "MultimediaDescriptor": {"type": "string"}
+  },
+  "additionalProperties": false
+}

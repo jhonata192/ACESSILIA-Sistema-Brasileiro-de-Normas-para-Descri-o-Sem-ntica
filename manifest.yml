@@ -1,0 +1,33 @@
+families:
+  - id: 100
+    title: "Terminologia e Princípios Fundamentais"
+    path: "ACESSILIA-100.md"
+    requires: []
+  - id: 200
+    title: "Descrição de Imagens Estáticas"
+    path: "families/200/ACESSILIA‑200.md"
+    requires: []
+  - id: 300
+    title: "Gráficos, Tabelas e Diagramas"
+    path: "families/300/ACESSILIA‑300.md"
+    requires: []
+  - id: 400
+    title: "Conteúdo Científico"
+    path: "families/400/ACESSILIA‑400.md"
+    requires: [100]
+  - id: 500
+    title: "Conteúdo Educacional"
+    path: "families/500/ACESSILIA‑500.md"
+    requires: [100]
+  - id: 600
+    title: "Conteúdo Multimídia"
+    path: "families/600/ACESSILIA‑600.md"
+    requires: [100]
+  - id: 700
+    title: "Validação e Conformidade"
+    path: "families/700/ACESSILIA‑700.md"
+    requires: [100, 200, 300, 400, 500, 600]
+  - id: 800
+    title: "Perfis de Acessibilidade e Conformidade"
+    path: "families/800/ACESSILIA‑800.md"
+    requires: [100, 200, 300, 400, 500, 600, 700]

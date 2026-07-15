@@ -1,0 +1,143 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ACESSILIA Metadata Schema",
+  "description": "Validates metadata for all ACESSILIA families (200-700). Supports both nested and flat structures. Standardize on flat structure.",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "description": "Text description of the content."
+    },
+    "license": {
+      "type": "string",
+      "description": "SPDX license identifier or URL."
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Optional nested metadata object (flat structure preferred).",
+      "additionalProperties": true
+    },
+    "conformsTo": {
+      "type": "string",
+      "description": "EPUB accessibility conformance claim."
+    },
+    "accessMode": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "EPUB access modes (e.g., textual, visual)."
+    },
+    "accessibilityFeature": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "EPUB accessibility features."
+    },
+    "accessibilityHazard": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "EPUB accessibility hazards."
+    },
+    "accessibilitySummary": {
+      "type": "string",
+      "description": "EPUB accessibility summary."
+    },
+    "imageType": {
+      "type": "string",
+      "description": "Image format (e.g., JPEG, PNG). Family 200."
+    },
+    "resolution": {
+      "type": "string",
+      "description": "Image resolution. Family 200."
+    },
+    "chartType": {
+      "type": "string",
+      "description": "Chart type (e.g., bar, line). Family 300."
+    },
+    "source": {
+      "type": "string",
+      "description": "Data source for charts. Family 300."
+    },
+    "xAxis": {
+      "type": "object",
+      "description": "X-axis metadata. Family 300."
+    },
+    "yAxis": {
+      "type": "object",
+      "description": "Y-axis metadata. Family 300."
+    },
+    "colors": {
+      "type": "object",
+      "description": "Color mapping for charts. Family 300."
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of scientific content. Family 400."
+    },
+    "author": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Authors of scientific content. Family 400."
+    },
+    "doi": {
+      "type": "string",
+      "description": "DOI identifier. Family 400."
+    },
+    "bibliography": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Bibliography entries (DOI/URL). Family 400."
+    },
+    "dataAvailability": {
+      "type": "string",
+      "description": "URL for data availability. Family 400."
+    },
+    "citationMetadata": {
+      "type": "object",
+      "description": "Citation metadata. Family 400."
+    },
+    "educationalContext": {
+      "type": "object",
+      "description": "Educational context metadata. Family 500."
+    },
+    "learningObjectives": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Learning objectives with Bloom verbs. Family 500."
+    },
+    "sequence": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Sequence of topics. Family 500."
+    },
+    "examples": {
+      "type": "array",
+      "items": { "type": "object" },
+      "description": "Examples and contra-examples. Family 500."
+    },
+    "mediaType": {
+      "type": "string",
+      "description": "MIME type for multimedia. Family 600."
+    },
+    "duration": {
+      "type": "string",
+      "description": "Duration in ISO 8601. Family 600."
+    },
+    "narrativeDescription": {
+      "type": "string",
+      "description": "Narrative description of multimedia. Family 600."
+    },
+    "subtitles": {
+      "type": "string",
+      "description": "URL for subtitles file. Family 600."
+    },
+    "audioDescription": {
+      "type": "boolean",
+      "description": "Audio description available. Family 600."
+    },
+    "transcript": {
+      "type": "string",
+      "description": "Full transcript text. Family 600."
+    }
+  },
+  "required": ["description", "license"],
+  "additionalProperties": true
+}
