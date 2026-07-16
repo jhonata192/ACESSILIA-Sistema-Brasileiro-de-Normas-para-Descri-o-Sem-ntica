@@ -32,6 +32,7 @@ Principais referências: [ACESSILIA‑100](../../ACESSILIA-100.md), [ACM Digital
 ```json
 {
   "title": "Estudo de Eficácia no Uso de X em Y",
+  "language": "pt-BR",
   "author": ["João Silva"],
   "doi": "10.1234/abcd.efgh",
   "bibliography": ["10.1111/abcd.2015"],
@@ -73,7 +74,7 @@ O relatório gerado **DEVE** indicar `PASS` ou `FAIL` para cada critério listad
 
 ## 9. Limitações e Exclusões
 
-Esta família aplica‑se a publicações científicas e técnicas revisadas por pares. Os seguintes tipos de conteúdo **NÃO DEVE** ser descritos exclusivamente usando esta família:
+Esta família aplica‑se a publicações científicas e técnicas revisadas por pares. Os seguintes tipos de conteúdo **NÃO DEVEM** ser descritos exclusivamente usando esta família:
 
 - **Conteúdo jornalístico ou de divulgação científica** → usar diretiva editorial geral.
 - **Materiais didáticos** → usar [ACESSILIA‑500](../500/ACESSILIA‑500.md).

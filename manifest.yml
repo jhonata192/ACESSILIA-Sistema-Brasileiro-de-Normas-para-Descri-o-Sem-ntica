@@ -1,3 +1,5 @@
+version: "1.1.0"
+
 families:
   - id: 100
     title: "Terminologia e Princípios Fundamentais"
@@ -6,11 +8,11 @@ families:
   - id: 200
     title: "Descrição de Imagens Estáticas"
     path: "families/200/ACESSILIA‑200.md"
-    requires: []
+    requires: [100]
   - id: 300
     title: "Gráficos, Tabelas e Diagramas"
     path: "families/300/ACESSILIA‑300.md"
-    requires: []
+    requires: [100]
   - id: 400
     title: "Conteúdo Científico"
     path: "families/400/ACESSILIA‑400.md"

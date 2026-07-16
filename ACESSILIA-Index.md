@@ -15,8 +15,8 @@
 
 | Família | Título | Identificador | Caminho | Requer |
 |---------|--------|---------------|---------|--------|
-| **200** | Descrição de Imagens Estáticas | `ACL-200` | [families/200/ACESSILIA‑200.md](families/200/ACESSILIA‑200.md) | — |
-| **300** | Gráficos, Tabelas e Diagramas | `ACL-300` | [families/300/ACESSILIA‑300.md](families/300/ACESSILIA‑300.md) | — |
+| **200** | Descrição de Imagens Estáticas | `ACL-200` | [families/200/ACESSILIA‑200.md](families/200/ACESSILIA‑200.md) | 100 |
+| **300** | Gráficos, Tabelas e Diagramas | `ACL-300` | [families/300/ACESSILIA‑300.md](families/300/ACESSILIA‑300.md) | 100 |
 | **400** | Conteúdo Científico | `ACL-400` | [families/400/ACESSILIA‑400.md](families/400/ACESSILIA‑400.md) | 100 |
 | **500** | Conteúdo Educacional | `ACL-500` | [families/500/ACESSILIA‑500.md](families/500/ACESSILIA‑500.md) | 100 |
 | **600** | Conteúdo Multimídia | `ACL-600` | [families/600/ACESSILIA‑600.md](families/600/ACESSILIA‑600.md) | 100 |
@@ -50,8 +50,8 @@
 |--------|--------|--------------------------|
 | [WCAG 2.2](https://www.w3.org/TR/WCAG22/) | Acessibilidade web | 200, 300, 400, 500, 600 |
 | [EPUB 3](https://www.w3.org/TR/epub-33/) | Publicações acessíveis | 200, 300, 400, 500, 600 |
-| [PDF/UA-1](https://www.iso.org/standard/54802.html) | Documentos PDF acessíveis | 200, 300, 400, 500 |
-| [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) | Requisitos europeus | Todas |
+| [PDF/UA-1](https://www.iso.org/standard/64599.html) | Documentos PDF acessíveis | 200, 300, 400, 500 |
+| [EN 301 549 v3.3.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.03.01_60/en_301549v030301p.pdf) | Requisitos europeus | Todas |
 | [Section 508](https://www.section508.gov/) | Acessibilidade governamental (EUA) | Todas |
 
 ## Fluxo de Revisão
@@ -66,6 +66,16 @@ Draft → Working Draft → Candidate Recommendation → Recommendation
 | **Working Draft** | Revisão interna pelo comitê técnico. |
 | **Candidate Recommendation** | Comentários de stakeholders externos. |
 | **Recommendation** | Objeto de publicação oficial. |
+
+## Guia de Leitura
+
+Para novos usuários, recomendamos a seguinte ordem de leitura:
+
+1. **ACESSILIA‑Base** – Arquitetura e conceitos gerais
+2. **ACESSILIA‑100** – Terminologia e princípios fundamentais
+3. **Família(s) de interesse** – Regras específicas para o tipo de conteúdo
+4. **Família 700** – Validação e conformidade
+5. **Família 800** – Perfis de acessibilidade
 
 ## Contato
 

@@ -46,7 +46,9 @@ As palavras DEVE, NÃO DEVE, DEVERIA e PODE, quando escritas em letras maiúscul
 
 **Confidence** – Valor numérico entre 0 e 1 que representa a confiança atribuída pelo sistema gerador quanto à completude e fidelidade da descrição produzida; não representa qualidade absoluta nem substitui revisão humana.
 
-**reviewStatus** – Estado da revisão, aceitação válida: draft | reviewed | approved | rejected | deprecated.**Inferência** – Informação adicionada sem evidência explícita no conteúdo.
+**reviewStatus** – Estado da revisão, aceitação válida: draft | reviewed | approved | rejected | deprecated.
+
+**Inferência** – Informação adicionada sem evidência explícita no conteúdo.
 **Hipótese** – Interpretação baseada em probabilidade, mas não confirmada.
 **Observação** – Registro das observações feitas durante a coleta de dados.
 **Interpretação** – Explicação ou atribuição de significado ao conteúdo, não abrangida por este padrão.
@@ -63,7 +65,7 @@ As palavras DEVE, NÃO DEVE, DEVERIA e PODE, quando escritas em letras maiúscul
 
 7. PRINCÍPIOS
 A) Objetividade – Neutralidade, Fidelidade, Ausência de Inferência, Verificabilidade.
-B) Clareza – Clareza, Precisão, Consistência, Terminologia.
+B) Clareza – Precisão, Consistência, Terminologia.
 C) Contexto – Contextualização, Proporcionalidade.
 D) Ética – Privacidade, Segurança, Não discriminação, Transparência.
 
@@ -117,7 +119,7 @@ Falhas comuns: • Inferir humor • Inferir estresse
 
 **PT-OBJ-03**
 Título: Ausência de Inferência de Identidade
-Requisito: A descrição **NÃO DEVE** migrar atributos de identidade (raça, classe, gênero) sem evidência.
+Requisito: A descrição **NÃO DEVE** inferir atributos de identidade (raça, classe, gênero) sem evidência.
 Objetivo: Manter neutralidade quanto a identidade.
 Severidade: Grave
 Métodos de avaliação: • Revisão humana • Checklist • IA
@@ -138,7 +140,7 @@ Podem informar os critérios implementados individualmente para fins de avaliaç
 
 11. REQUISITOS PARA IA
 O sistema **DEVE**:
-- Separar observação, inferência e hipóteses; // sistema deve distinguir explicitamente fatos observados, hipóteses e informações ausentes
+- Separar observação, inferência e hipóteses;
 - Indicar incerteza quando necessário;
 - Nunca inventar texto ilegível;
 - Manter rastreabilidade da descrição;

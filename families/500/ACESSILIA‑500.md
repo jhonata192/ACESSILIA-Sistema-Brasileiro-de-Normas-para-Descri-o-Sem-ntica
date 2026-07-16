@@ -32,10 +32,11 @@ Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminolo
 ```json
 {
   "description": "Apostila de introdução à programação para ensino médio",
+  "language": "pt-BR",
   "educationalContext": {
     "theme": "Programação básica",
     "targetAudience": "Ensino médio",
-    "level": "Introductory"
+    "level": "Introdutório"
   },
   "learningObjectives": [
     "Identificar variáveis e tipos de dados",
@@ -77,7 +78,7 @@ O relatório gerado **DEVE** indicar `PASS` ou `FAIL` para cada critério listad
 
 ## 9. Limitações e Exclusões
 
-Esta família aplica‑se a materiais didáticos e recursos pedagógicos. Os seguintes tipos de conteúdo **NÃO DEVE** ser descritos exclusivamente usando esta família:
+Esta família aplica‑se a materiais didáticos e recursos pedagógicos. Os seguintes tipos de conteúdo **NÃO DEVEM** ser descritos exclusivamente usando esta família:
 
 - **Publicações científicas ou técnicas** → usar [ACESSILIA‑400](../400/ACESSILIA‑400.md).
 - **Imagens didáticas e diagramas** → aplicar também [ACESSILIA‑200](../200/ACESSILIA‑200.md) ou [ACESSILIA‑300](../300/ACESSILIA‑300.md).

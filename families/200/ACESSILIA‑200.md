@@ -39,7 +39,8 @@ O conteúdo **DEVE** seguir os princípios e terminologia definidos em [ACESSILI
 ```json
 {
   "description": "Mesa de madeira com quatro cadeiras na sala de jantar, iluminada por lâmpada de teto, com foto de cromo e chapéu no gabinete.",
-  "imageType": "JPEG",
+  "language": "pt-BR",
+  "imageType": "image/jpeg",
   "resolution": "300dpi",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "metadata": {
@@ -50,7 +51,7 @@ O conteúdo **DEVE** seguir os princípios e terminologia definidos em [ACESSILI
   "accessMode": ["textual", "visual"],
   "accessibilityFeature": ["alternativeText", "readingOrder"],
   "accessibilityHazard": ["none"],
-  "accessibilitySummary": "This image includes a detailed textual description that conveys the visual content."
+  "accessibilitySummary": "Esta imagem inclui uma descrição textual detalhada que transmite o conteúdo visual."
 }
 ```
 
@@ -81,7 +82,7 @@ O relatório gerado **DEVE** indicar `PASS` ou `FAIL` para cada critério listad
 
 ## 9. Limitações e Exclusões
 
-Esta família aplica‑se exclusivamente a imagens estáticas. Os seguintes tipos de conteúdo **NÃO DEVE** ser descritos usando esta família:
+Esta família aplica‑se exclusivamente a imagens estáticas. Os seguintes tipos de conteúdo **NÃO DEVEM** ser descritos usando esta família:
 
 - **Vídeos e animações em movimento** → usar [ACESSILIA‑600](../600/ACESSILIA‑600.md).
 - **Gráficos, tabelas e diagramas** → usar [ACESSILIA‑300](../300/ACESSILIA‑300.md).

@@ -10,7 +10,8 @@
     "EducationalContent": {"type": "string"},
     "MultimediaDescriptor": {"type": "string"},
     "ValidationConformity": {"type": "string"},
-    "AccessibilityProfile": {"type": "string"}
+    "AccessibilityProfile": {"type": "string"},
+    "Terminology": {"type": "string"}
   },
   "additionalProperties": false
 }

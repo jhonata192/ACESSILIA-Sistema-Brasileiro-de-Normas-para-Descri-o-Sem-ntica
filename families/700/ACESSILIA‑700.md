@@ -7,7 +7,7 @@
 Define métricas de avaliação, procedimentos de validação e requisitos de conformidade para todos os conteúdos descritos pelo padrão ACESSILIA.
 
 ## 2. Referências de Norma
-Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminologia e auditabilidade. Aplica‑se a todas as famílias de conteúdo: [200](../200/ACESSILIA‑200.md), [300](../300/ACESSILIA‑300.md), [400](../400/ACESSILIA‑400.md), [500](../500/ACESSILIA‑500.md), [600](../600/ACESSILIA‑600.md) e [800](../800/ACESSILIA‑800.md) para perfis de conformidade.
+Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminologia e auditabilidade. Em adição ao [WCAG 2.2](https://www.w3.org/TR/WCAG22/). Aplica‑se a todas as famílias de conteúdo: [200](../200/ACESSILIA‑200.md), [300](../300/ACESSILIA‑300.md), [400](../400/ACESSILIA‑400.md), [500](../500/ACESSILIA‑500.md), [600](../600/ACESSILIA‑600.md) e [800](../800/ACESSILIA‑800.md) para perfis de conformidade.
 
 ## 3. Diretrizes Principais
 
@@ -16,8 +16,8 @@ Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminolo
 | ACL‑700‑VAL‑001 | **Fidelidade Semântica** | Percentual de correspondência com o conteúdo original ≥ 90 %. | Medida por comparação entre descrição e conteúdo fonte. |
 | ACL‑700‑VAL‑002 | **Claridade** | Pontuação em avaliação de legibilidade (Flesch-Kincaid ou equivalente para português) ≥ 80 %. | Aplicável a textos em português e inglês. |
 | ACL‑700‑VAL‑003 | **Reprodutibilidade** | Percentual de concordância entre descritores independentes ≥ 85 %. | Teste com pelo menos 2 descritores independentes. |
-| ACL‑700‑VAL‑004 | **Objetividade** | 100 % de frases com verbos observáveis. | Verificação automática via linter. |
-| ACL‑700‑VAL‑005 | **Completude** | 100 % dos campos obrigatórios preenchidos no metadata. | Validação de esquema JSON. |
+| ACL‑700‑VAL‑004 | **Validação de Esquema** | 100 % dos campos obrigatórios preenchidos no metadata. | Verificação automática via linter. |
+| ACL‑700‑VAL‑005 | **Relatório de Conformidade** | 100 % dos critérios avaliados no relatório. | Geração de relatório Markdown. |
 
 ## 4. Métricas de Qualidade
 
@@ -58,7 +58,7 @@ Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminolo
 | ACL‑700‑VAL‑002 | Garantir Claridade ≥ 80 %. | Pontuação de legibilidade (Flesch-Kincaid ou equivalente para português). | Alta | Pontuação ≥ 80 % no relatório. |
 | ACL‑700‑VAL‑003 | Garantir reprodutibilidade ≥ 85 %. | Relatório de concordância entre descritores independentes. | Alta | Percentual de concordância ≥ 85 %. |
 | ACL‑700‑VAL‑004 | Validar esquema de metadata. | Relatório de validação JSON contra `acessilia.schema.json`. | Alta | Ausência de erros de esquema. |
-| ACL‑700‑VAL‑005 | Gerar relatório de conformidade. | Arquivo Markdown com resultado `PASS`/`FAIL` por critério. | Média | Presença do relatório gerado pelo linter. |
+| ACL‑700‑VAL‑005 | Gerar relatório de conformidade. | Arquivo Markdown com resultado `PASS`/`FAIL` para cada critério. | Média | Presença do relatório gerado pelo linter. |
 
 ## 7. Exemplo de Relatório de Conformidade
 

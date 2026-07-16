@@ -7,7 +7,7 @@
 Define níveis de conformidade, perfis de acessibilidade e mecanismos de extensão do padrão ACESSILIA. Estabelece como implementações devem declarar conformidade e como novos perfis podem ser criados.
 
 ## 2. Referências de Norma
-Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminologia e auditabilidade. Em adição ao [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [EPUB 3](https://www.w3.org/TR/epub-33/), [PDF/UA‑1](https://www.iso.org/standard/64599.html), [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) e [Section 508](https://www.section508.gov/) para requisitos de acessibilidade.
+Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminologia e auditabilidade. Em adição ao [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [EPUB 3](https://www.w3.org/TR/epub-33/), [PDF/UA‑1](https://www.iso.org/standard/64599.html), [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) e [Section 508](https://www.section508.gov/) para requisitos de acessibilidade. Referencia [ACESSILIA‑700](../700/ACESSILIA‑700.md) para critérios de validação.
 
 ## 3. Diretrizes Principais
 
@@ -145,6 +145,108 @@ Cada perfil **DEVE** conter:
   ],
   "families": [200],
   "conformanceLevel": "A",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+```
+
+### 7.3 Exemplo de Perfil — Conteúdo Matemático
+
+```json
+{
+  "id": "ACL-800-PRF-003",
+  "name": "Accessibility Profile - Conteúdo Matemático",
+  "namePt": "Perfil de Acessibilidade - Conteúdo Matemático",
+  "description": "Requisitos para equações e notação matemática acessível.",
+  "mediaTypes": [
+    "application/xhtml+xml",
+    "application/pdf"
+  ],
+  "requiredMetadata": [
+    "title",
+    "description",
+    "language"
+  ],
+  "families": [400],
+  "conformanceLevel": "AA",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+```
+
+### 7.4 Exemplo de Perfil — Gráfico Científico
+
+```json
+{
+  "id": "ACL-800-PRF-004",
+  "name": "Accessibility Profile - Gráfico Científico",
+  "namePt": "Perfil de Acessibilidade - Gráfico Científico",
+  "description": "Requisitos para gráficos de dados e diagramas científicos.",
+  "mediaTypes": [
+    "image/png",
+    "image/svg+xml",
+    "application/pdf"
+  ],
+  "requiredMetadata": [
+    "title",
+    "description",
+    "chartType",
+    "source",
+    "xAxis",
+    "yAxis"
+  ],
+  "families": [300, 400],
+  "conformanceLevel": "AA",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+```
+
+### 7.5 Exemplo de Perfil — Captura de Tela
+
+```json
+{
+  "id": "ACL-800-PRF-005",
+  "name": "Accessibility Profile - Captura de Tela",
+  "namePt": "Perfil de Acessibilidade - Captura de Tela",
+  "description": "Requisitos para descrição de interfaces e capturas de tela.",
+  "mediaTypes": [
+    "image/png",
+    "image/jpeg"
+  ],
+  "requiredMetadata": [
+    "title",
+    "description",
+    "imageType",
+    "resolution"
+  ],
+  "families": [200],
+  "conformanceLevel": "A",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+```
+
+### 7.6 Exemplo de Perfil — Conteúdo STEM
+
+```json
+{
+  "id": "ACL-800-PRF-006",
+  "name": "Accessibility Profile - Conteúdo STEM",
+  "namePt": "Perfil de Acessibilidade - Conteúdo STEM",
+  "description": "Requisitos para ciência, tecnologia, engenharia e matemática.",
+  "mediaTypes": [
+    "application/xhtml+xml",
+    "application/pdf",
+    "image/png",
+    "image/svg+xml"
+  ],
+  "requiredMetadata": [
+    "title",
+    "description",
+    "language",
+    "chartType",
+    "source",
+    "educationalContext"
+  ],
+  "families": [300, 400, 500],
+  "conformanceLevel": "AA",
   "license": "https://creativecommons.org/licenses/by/4.0/"
 }
 ```

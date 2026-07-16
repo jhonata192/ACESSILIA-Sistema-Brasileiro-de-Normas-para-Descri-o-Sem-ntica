@@ -2,15 +2,24 @@
 
 > **RFC 2119**: Os termos **DEVE**, **NÃO DEVE**, **PODE** e **RECOMENDA‑SE** devem ser interpretados conforme [RFC 2119](https://tools.ietf.org/html/rfc2119) e [RFC 8174](https://tools.ietf.org/html/rfc8174).
 
+## Sumário
+
+- [1. Terminologia](#1-terminologia)
+- [2. Princípios Fundamentais](#2-princípios-fundamentais)
+- [3. Taxonomia de Elementos de Descrição](#3-taxonomia-de-elementos-de-descrição)
+- [4. Requisitos de Auditoria](#4-requisitos-de-auditoria)
+- [5. Identificadores Permanentes](#5-identificadores-permanentes)
+- [6. Glossário](#6-glossário)
+
 ## 1. Terminologia
 
 | Termo | Definição |
 |-------|-----------|
 | **Objetividade** | A descrição **DEVE** relatar apenas o que pode ser observado diretamente. |
 | **Fidelidade** | A descrição **NÃO DEVE** conter informações sem evidência observável. |
-| **Claridade** | A linguagem **DEVE** ser objetiva, livre de ambiguidade e sem juízo de valor. |
+| **Clareza** | A linguagem **DEVE** ser objetiva, livre de ambiguidade e sem juízo de valor. |
 | **Consistência** | O uso de termos e estrutura **DEVE** ser uniforme em todo o documento. |
-| **Reprodutibilidade** | Diferentes descritores independentes **DEVEM** chegar a resultados equivalentes (≥ 85 %). |
+| **Reprodutibilidade** | Diferentes descritores independentes **DEVEM** chegar a resultados equivalentes (≥ 85%). |
 
 ## 2. Princípios Fundamentais
 
@@ -35,6 +44,7 @@ O arquivo **`manifest.yml`** atua como catálogo de famílias e controla a ordem
 | `MultimediaDescriptor` | 600 | Descrição de conteúdo multimídia. |
 | `ValidationConformity` | 700 | Validação e conformidade. |
 | `AccessibilityProfile` | 800 | Perfis de acessibilidade e conformidade. |
+| `Terminology` | 100 | Identificadores de terminologia e princípios fundamentais. |
 
 ## 4. Requisitos de Auditoria
 
@@ -46,7 +56,7 @@ Para garantir a rastreabilidade e a auditabilidade dos requisitos, cada critéri
 | ACL‑100‑T002 | Alta | Uso de **NÃO DEVE** em todos os documentos para restrições. |
 | ACL‑100‑T003 | Média | Ausência de ambiguidades na redação (validação por linter). |
 | ACL‑100‑T004 | Alta | Termo consistente em todas as diretrizes (verificação cruzada). |
-| ACL‑100‑T005 | Média | Conformidade de métricas de reprodutibilidade (≥ 85 %). |
+| ACL‑100‑T005 | Média | Conformidade de métricas de reprodutibilidade (≥ 85%). |
 | ACL‑100‑T006 | Alta | Identificador permanente `ACL-<FAMÍLIA>-<TIPO>-<NÚMERO>` em todos os critérios. |
 | ACL‑100‑T007 | Média | Referência a RFC 2119 em todos os documentos normativos. |
 
@@ -63,6 +73,7 @@ Os identificadores seguem o padrão `ACL‑<FAMÍLIA>-<TIPO>-<NÚMERO>`. Exemplo
 | 600 | `ACL‑600‑MDM‑NNN` | `ACL‑600‑MDM‑001` |
 | 700 | `ACL‑700‑VAL‑NNN` | `ACL‑700‑VAL‑001` |
 | 800 | `ACL‑800‑PRF‑NNN` | `ACL‑800‑PRF‑001` |
+| 100 | `ACL‑100‑T‑NNN` | `ACL‑100‑T001` |
 
 Estes IDs são **fixos** e não mudam entre versões.
 
@@ -74,10 +85,10 @@ Estes IDs são **fixos** e não mudam entre versões.
 |-------|-----------|
 | **Objetividade** | Princípio de relatar apenas o que pode ser observado diretamente. |
 | **Fidelidade (Princípio)** | Princípio qualitativo: descrição sem informações sem evidência observável. |
-| **Fidelidade Semântica (Métrica)** | Métrica quantitativa: percentual de correspondência com o conteúdo original (≥ 90 %). |
-| **Claridade** | Princípio de linguagem objetiva, livre de ambiguidade e sem juízo de valor. |
+| **Fidelidade Semântica (Métrica)** | Métrica quantitativa: percentual de correspondência com o conteúdo original (≥ 90%). |
+| **Clareza** | Princípio de linguagem objetiva, livre de ambiguidade e sem juízo de valor. |
 | **Consistência** | Princípio de uso uniforme de termos e estrutura em todo o documento. |
-| **Reprodutibilidade** | Capacidade de diferentes descritores independentes chegarem a resultados equivalentes (≥ 85 %). |
+| **Reprodutibilidade** | Capacidade de diferentes descritores independentes chegarem a resultados equivalentes (≥ 85%). |
 | **Neutralidade** | Princípio de não expressar opinião ou preferência pessoal na descrição. |
 
 ### 6.2 Termos Operacionais
@@ -98,17 +109,23 @@ Estes IDs são **fixos** e não mudam entre versões.
 | **Relatório de Conformidade** | Documento gerado pelo linter com resultado PASS/FAIL por critério. |
 | **Validação** | Processo de verificar se conteúdo e metadados atendem aos requisitos. |
 | **Auditoria** | Revisão humana independente para validar conformidade além da validação automática. |
+| **Perfil** | Conjunto de critérios e requisitos específicos para um tipo de conteúdo ou cenário de uso, podendo restringir ou expandir os requisitos das famílias base. |
+| **Extensão** | Mecanismo pelo qual novos perfis adicionam critérios além das famílias base, mediante documentação e revisão pelo comitê técnico. |
+| **Completude** | Percentual de campos obrigatórios preenchidos no metadata em relação ao total de campos exigidos pelo esquema. |
 
 ### 6.3 Termos Técnicos
 
 | Termo | Definição |
 |-------|-----------|
 | **PII** | *Personally Identifiable Information* — dados pessoais identificáveis. |
-| **SPDX** | *Software Package Data Exchange* — padrão para identificação de licenças. |
+| **SPDX** | *Software Package Data Exchange* — padrão para identificação de licenças ([spdx.org](https://spdx.org/specifications)). |
 | **Contraste de Luminância** | Razão mínima de luminância entre texto e fundo (≥ 4,5:1 conforme WCAG). |
 | **Contraste de Cores** | Uso de cores diferenciadoras com significado textual associado. |
-| **Verbo de Bloom** | Verbo de ação mensurável usado na taxonomia de Bloom para objetivos educacionais. |
-| **Flesch-Kincaid** | Fórmula de legibilidade que mede a compreensibilidade de textos. |
+| **Verbo de Bloom** | Verbo de ação mensurável usado na taxonomia de Bloom para objetivos educacionais (Bloom et al., 1956; Anderson & Krathwohl, 2001). |
+| **Flesch-Kincaid** | Fórmula de legibilidade que mede a compreensibilidade de textos (Flesch, 1949). Para português: índice equivalente adaptado por Costa (1998). |
+| **Legenda (Gráfico)** | Texto que descreve eixos, unidades e elementos de um gráfico ou diagrama. |
+| **Legenda (Vídeo)** | Texto sincronizado com o áudio que transcreve falas e sons relevantes em conteúdo multimídia (captions). |
+| **Índice de Gunning** | Fórmula alternativa de legibilidade que mede a compreensibilidade de textos; alternativa ao Flesch-Kincaid para validação de Claridade. |
 
 ### 6.4 Termos Gerais
 

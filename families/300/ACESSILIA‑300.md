@@ -34,6 +34,7 @@ Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminolo
 ```json
 {
   "description": "Gráfico de barras com receita anual 2017‑2023, eixo X: anos, eixo Y: valores em R$",
+  "language": "pt-BR",
   "chartType": "bar",
   "source": "Estatística Federal",
   "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -74,7 +75,7 @@ O relatório gerado **DEVE** indicar `PASS` ou `FAIL` para cada critério listad
 
 ## 9. Limitações e Exclusões
 
-Esta família aplica‑se a representações visuais de dados estáticas. Os seguintes tipos de conteúdo **NÃO DEVE** ser descritos usando esta família:
+Esta família aplica‑se a representações visuais de dados estáticas. Os seguintes tipos de conteúdo **NÃO DEVEM** ser descritos usando esta família:
 
 - **Imagens fotográficas ou ilustrações** → usar [ACESSILIA‑200](../200/ACESSILIA‑200.md).
 - **Vídeos, animações e conteúdos multimídia** → usar [ACESSILIA‑600](../600/ACESSILIA‑600.md).

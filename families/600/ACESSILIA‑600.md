@@ -7,7 +7,7 @@
 Aplica‑se a vídeos, animações, apresentações interativas, podcasts e conteúdos audiovisuais que demandam descrição acessível.
 
 ## 2. Referências de Norma
-Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminologia e auditabilidade. Em adição ao [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [DAISY 3.0](https://daisy.org/activities/standards/daisy/daisy-3/) e [EPUB 3](https://www.w3.org/TR/epub-33/) para multimídia acessível.
+Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminologia e auditabilidade. Em adição ao [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [DAISY 3](https://daisy.org/activities/standards/daisy/daisy-3/) e [EPUB 3](https://www.w3.org/TR/epub-33/) para multimídia acessível.
 
 ## 3. Diretrizes Principais
 
@@ -34,6 +34,7 @@ Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminolo
 ```json
 {
   "description": "Vídeo tutorial sobre configuração de rede",
+  "language": "pt-BR",
   "mediaType": "video/mp4",
   "duration": "PT12M30S",
   "narrativeDescription": "O instrutor demonstra passo a passo a configuração de IP estático em um roteador, iniciando pelo acesso à interface web, seguido da inserção dos dados de rede e finalizando com o teste de conectividade.",
@@ -45,7 +46,7 @@ Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminolo
   "accessMode": ["textual", "visual", "auditory"],
   "accessibilityFeature": ["captions", "audioDescription", "transcript"],
   "accessibilityHazard": ["none"],
-  "accessibilitySummary": "This video includes synchronized captions, audio description, and a full text transcript."
+  "accessibilitySummary": "Este vídeo inclui legendas sincronizadas, áudio descritivo e uma transcrição de texto completa."
 }
 ```
 
@@ -76,7 +77,7 @@ O relatório gerado **DEVE** indicar `PASS` ou `FAIL` para cada critério listad
 
 ## 9. Limitações e Exclusões
 
-Esta família aplica‑se a conteúdos audiovisuais e multimídia. Os seguintes tipos de conteúdo **NÃO DEVE** ser descritos exclusivamente usando esta família:
+Esta família aplica‑se a conteúdos audiovisuais e multimídia. Os seguintes tipos de conteúdo **NÃO DEVEM** ser descritos exclusivamente usando esta família:
 
 - **Imagens estáticas** → usar [ACESSILIA‑200](../200/ACESSILIA‑200.md).
 - **Gráficos e diagramas em vídeo** → aplicar também [ACESSILIA‑300](../300/ACESSILIA‑300.md).

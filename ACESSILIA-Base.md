@@ -2,6 +2,16 @@
 
 > **RFC 2119**: Os termos **DEVE**, **NÃO DEVE**, **PODE** e **RECOMENDA‑SE** devem ser interpretados conforme [RFC 2119](https://tools.ietf.org/html/rfc2119) e [RFC 8174](https://tools.ietf.org/html/rfc8174).
 
+## Sumário
+
+- [1. Objetivo](#1-objetivo)
+- [2. Estrutura de Inclusão](#2-estrutura-de-inclusão)
+- [3. Versionamento](#3-versionamento)
+- [4. Fluxo de Revisões](#4-fluxo-de-revisões)
+- [5. Identificadores Permanentes](#5-identificadores-permanentes)
+- [6. Manifesto de Famílias](#6-manifesto-de-famílias)
+- [7. Validação Automatizada](#7-validação-automatizada)
+
 ## 1. Objetivo
 Este documento descreve a arquitetura modular do ACESSILIA, os mecanismos de versionamento e as regras de inclusão entre módulos.
 
@@ -42,7 +52,7 @@ Escreva a descrição final concatenando ou importando os arquivos desejados.
 | **Draft** | Proposta não oficial. |
 | **Working Draft** | Revisão interna pelo comitê técnico. |
 | **Candidate Recommendation** | Comentários de stakeholders externos. |
-| **Recommendation** | Objeto de publicação oficial. |
+| **Recommendation** | Apto para publicação oficial. |
 
 > Todos os documentos **DEVEM** usar *RFC 2119* para expressões como **DEVE** e **NÃO DEVE**.
 
@@ -75,11 +85,11 @@ families:
   - id: 200
     title: "Descrição de Imagens Estáticas"
     path: "families/200/ACESSILIA‑200.md"
-    requires: []
+    requires: [100]
   - id: 300
     title: "Gráficos, Tabelas e Diagramas"
     path: "families/300/ACESSILIA‑300.md"
-    requires: []
+    requires: [100]
   - id: 400
     title: "Conteúdo Científico"
     path: "families/400/ACESSILIA‑400.md"

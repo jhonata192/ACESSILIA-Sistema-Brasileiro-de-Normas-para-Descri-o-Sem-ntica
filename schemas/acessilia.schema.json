@@ -1,21 +1,109 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://acessilia.org/schemas/acessilia.schema.json",
   "title": "ACESSILIA Metadata Schema",
   "description": "Validates metadata for all ACESSILIA families (200-800). Supports both nested and flat structures. Standardize on flat structure.",
+  "version": "1.1.0",
   "type": "object",
+  "definitions": {
+    "educationalContext": {
+      "type": "object",
+      "description": "Educational context metadata. Family 500.",
+      "properties": {
+        "theme": { "type": "string" },
+        "targetAudience": { "type": "string" },
+        "level": { "type": "string", "enum": ["Introductory", "Intermediate", "Advanced"] }
+      },
+      "additionalProperties": false
+    },
+    "citationMetadata": {
+      "type": "object",
+      "description": "Citation metadata. Family 400.",
+      "properties": {
+        "publisher": { "type": "string" },
+        "version": { "type": "string" },
+        "datePublished": { "type": "string", "format": "date" },
+        "author": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  },
   "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the description (UUID or ACL-FAM-TIPO-NNN format)."
+    },
     "description": {
       "type": "string",
       "description": "Text description of the content."
+    },
+    "language": {
+      "type": "string",
+      "description": "BCP 47 language tag for the content (e.g., pt-BR, en-US)."
     },
     "license": {
       "type": "string",
       "description": "SPDX license identifier or URL."
     },
+    "standard": {
+      "type": "string",
+      "description": "Standard name and version (e.g., 'ACESSILIA 1.0')."
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date/time of creation or last update."
+    },
+    "reviewStatus": {
+      "type": "string",
+      "enum": ["draft", "reviewed", "approved", "rejected", "deprecated"],
+      "description": "Review status of the description."
+    },
+    "reviewer": {
+      "type": "string",
+      "description": "Name or identifier of the reviewer."
+    },
+    "model": {
+      "type": "string",
+      "description": "Name of the AI model used (if applicable)."
+    },
+    "modelVersion": {
+      "type": "string",
+      "description": "Version of the AI model used (if applicable)."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Confidence score (0-1) of the description quality."
+    },
+    "uncertainty": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of uncertainty factors identified in the description."
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Known limitations of the description."
+    },
     "metadata": {
       "type": "object",
       "description": "Optional nested metadata object (flat structure preferred).",
       "additionalProperties": true
+    },
+    "privacyNotice": {
+      "type": "boolean",
+      "description": "Indicates if privacy notice is required (PII detected). Family 200."
+    },
+    "contrastWarning": {
+      "type": "boolean",
+      "description": "Indicates if contrast warning is needed. Family 200."
+    },
+    "familyId": {
+      "type": "integer",
+      "enum": [200, 300, 400, 500, 600, 700, 800],
+      "description": "Family identifier for the content type."
     },
     "conformsTo": {
       "type": "string",
@@ -45,10 +133,6 @@
       "items": { "type": "string" },
       "description": "EPUB access modes sufficient (e.g., textual, visual)."
     },
-    "language": {
-      "type": "string",
-      "description": "BCP 47 language tag for the content."
-    },
     "accessibilityAPI": {
       "type": "array",
       "items": { "type": "string" },
@@ -61,7 +145,7 @@
     },
     "imageType": {
       "type": "string",
-      "description": "Image format (e.g., JPEG, PNG). Family 200."
+      "description": "Image MIME type (e.g., image/jpeg, image/png). Family 200."
     },
     "resolution": {
       "type": "string",
@@ -110,12 +194,10 @@
       "description": "URL for data availability. Family 400."
     },
     "citationMetadata": {
-      "type": "object",
-      "description": "Citation metadata. Family 400."
+      "$ref": "#/definitions/citationMetadata"
     },
     "educationalContext": {
-      "type": "object",
-      "description": "Educational context metadata. Family 500."
+      "$ref": "#/definitions/educationalContext"
     },
     "learningObjectives": {
       "type": "array",
@@ -177,6 +259,6 @@
       "description": "Required metadata fields for the profile. Family 800."
     }
   },
-  "required": ["description", "license", "language"],
+  "required": ["id", "description", "language", "license", "standard", "date", "reviewStatus"],
   "additionalProperties": true
 }
