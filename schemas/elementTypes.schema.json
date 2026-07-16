@@ -6,9 +6,11 @@
   "properties": {
     "ImageDescription": {"type": "string"},
     "ChartDescription": {"type": "string"},
-    "MathExpression": {"type": "string"},
-    "DocumentStructure": {"type": "string"},
-    "MultimediaDescriptor": {"type": "string"}
+    "ScientificContent": {"type": "string"},
+    "EducationalContent": {"type": "string"},
+    "MultimediaDescriptor": {"type": "string"},
+    "ValidationConformity": {"type": "string"},
+    "AccessibilityProfile": {"type": "string"}
   },
   "additionalProperties": false
 }

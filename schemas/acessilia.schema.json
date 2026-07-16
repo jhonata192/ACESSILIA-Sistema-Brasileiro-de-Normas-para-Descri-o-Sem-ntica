@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "ACESSILIA Metadata Schema",
-  "description": "Validates metadata for all ACESSILIA families (200-700). Supports both nested and flat structures. Standardize on flat structure.",
+  "description": "Validates metadata for all ACESSILIA families (200-800). Supports both nested and flat structures. Standardize on flat structure.",
   "type": "object",
   "properties": {
     "description": {
@@ -39,6 +39,25 @@
     "accessibilitySummary": {
       "type": "string",
       "description": "EPUB accessibility summary."
+    },
+    "accessModeSufficient": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "EPUB access modes sufficient (e.g., textual, visual)."
+    },
+    "language": {
+      "type": "string",
+      "description": "BCP 47 language tag for the content."
+    },
+    "accessibilityAPI": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Accessibility APIs supported (e.g., UIAutomation, MSAA)."
+    },
+    "accessibilityControl": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Input methods controlled (e.g., keyboard, voice, switch)."
     },
     "imageType": {
       "type": "string",
@@ -136,8 +155,28 @@
     "transcript": {
       "type": "string",
       "description": "Full transcript text. Family 600."
+    },
+    "conformanceLevel": {
+      "type": "string",
+      "enum": ["A", "AA", "AAA"],
+      "description": "Conformance level declaration. Family 800."
+    },
+    "profiles": {
+      "type": "array",
+      "items": { "type": "object" },
+      "description": "Accessibility profiles defined. Family 800."
+    },
+    "mediaTypes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "MIME types for the profile. Family 800."
+    },
+    "requiredMetadata": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Required metadata fields for the profile. Family 800."
     }
   },
-  "required": ["description", "license"],
+  "required": ["description", "license", "language"],
   "additionalProperties": true
 }
