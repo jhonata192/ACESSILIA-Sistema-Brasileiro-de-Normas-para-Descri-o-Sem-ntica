@@ -45,7 +45,12 @@ O conteúdo **DEVE** seguir os princípios e terminologia definidos em [ACESSILI
   "metadata": {
     "privacyNotice": false,
     "contrastWarning": false
-  }
+  },
+  "conformsTo": "EPUB Accessibility 1.1 - WCAG 2.2 Level AA",
+  "accessMode": ["textual", "visual"],
+  "accessibilityFeature": ["alternativeText", "readingOrder"],
+  "accessibilityHazard": ["none"],
+  "accessibilitySummary": "This image includes a detailed textual description that conveys the visual content."
 }
 ```
 
@@ -83,5 +88,6 @@ Esta família aplica‑se exclusivamente a imagens estáticas. Os seguintes tipo
 - **Imagens 3D renderizadas em tempo real** → exigem família específica futura.
 - **Conteúdos gerados por machine‑learning** sem objeto visual observável → não aplicável.
 - **Conteúdo científico ou educacional** → usar [ACESSILIA‑400](../400/ACESSILIA‑400.md) ou [ACESSILIA‑500](../500/ACESSILIA‑500.md).
+- **Declaração de conformidade e perfis** → usar [ACESSILIA‑800](../800/ACESSILIA‑800.md).
 
 Formatos suportados: JPEG, PNG, SVG, GIF, TIFF, WebP. Formatos não listados **DEVEM** ser validados quanto à compatibilidade antes da aplicação.
