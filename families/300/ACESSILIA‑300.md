@@ -7,7 +7,7 @@
 Aplica‑se a todas as representações visuais de dados que podem aparecer em documentos digitais, apresentações, relatórios científicos e dashboards interativos: gráficos de barras, linhas, pizza, radar, heat‑map, gráficos de dispersão; tabelas manuscritas ou digitais; diagramas UML, ER, fluxogramas, mapas conceptuais.
 
 ## 2. Referências de Norma
-Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminologia e auditabilidade; em adição ao [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [EPUB 3](https://www.w3.org/TR/epub-33/) e [PDF/UA‑1](https://www.iso.org/standard/54268.html).
+Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminologia e auditabilidade; em adição ao [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [EPUB 3](https://www.w3.org/TR/epub-33/) e [PDF/UA‑1](https://www.iso.org/standard/64599.html).
 
 ## 3. Diretrizes Principais
 
@@ -81,5 +81,6 @@ Esta família aplica‑se a representações visuais de dados estáticas. Os seg
 - **Dashboards interativos em tempo real** → exigem extensão específica futura.
 - **Dados brutos sem representação visual** → não aplicável; não há elemento visual a descrever.
 - **Conteúdo científico ou educacional com gráficos** → usar também [ACESSILIA‑400](../400/ACESSILIA‑400.md) ou [ACESSILIA‑500](../500/ACESSILIA‑500.md) conforme o contexto.
+- **Declaração de conformidade e perfis** → usar [ACESSILIA‑800](../800/ACESSILIA‑800.md).
 
 Diagramas UML, ER e fluxogramas são incluídos desde que representem dados ou processos de forma visual estática.
