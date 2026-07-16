@@ -83,6 +83,7 @@ Esta família aplica‑se a materiais didáticos e recursos pedagógicos. Os seg
 - **Imagens didáticas e diagramas** → aplicar também [ACESSILIA‑200](../200/ACESSILIA‑200.md) ou [ACESSILIA‑300](../300/ACESSILIA‑300.md).
 - **Vídeo‑aulas e conteúdos audiovisuais** → usar [ACESSILIA‑600](../600/ACESSILIA‑600.md).
 - **Avaliações e provas** sem contexto pedagógico descritivo → não aplicável.
-- **Documentos administrativos** (edais, regimentos) → não são materiais didáticos.
+- **Documentos administrativos** (editais, regimentos) → não são materiais didáticos.
+- **Declaração de conformidade e perfis** → usar [ACESSILIA‑800](../800/ACESSILIA‑800.md).
 
 A verificação de verbos de Bloom depende de base lexical e pode não reconhecer variações regionais ou termos técnicos específicos.

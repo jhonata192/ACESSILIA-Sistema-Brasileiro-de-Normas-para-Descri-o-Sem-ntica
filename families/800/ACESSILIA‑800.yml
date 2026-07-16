@@ -1,7 +1,9 @@
-# ACESSILIA‑800 – Perfis de Acessibilidade e Metadados
+# ACESSILIA‑800 – Perfis de Acessibilidade e Conformidade
 profiles:
-  - id: ACL-PRF-001
+  - id: ACL-800-PRF-001
     name: "Accessibility Profile - Livro Digital"
+    namePt: "Perfil de Acessibilidade - Livro Digital"
+    description: "Requisitos para livros digitais acessíveis em EPUB e PDF."
     mediaTypes:
       - application/epub+zip
       - application/pdf
@@ -9,3 +11,90 @@ profiles:
       - title
       - language
       - description
+      - conformsTo
+      - accessMode
+      - accessibilityFeature
+      - accessibilitySummary
+    families: [200, 300, 400, 500]
+    conformanceLevel: "AA"
+    license: "https://creativecommons.org/licenses/by/4.0/"
+
+  - id: ACL-800-PRF-002
+    name: "Accessibility Profile - Fotografia"
+    namePt: "Perfil de Acessibilidade - Fotografia"
+    description: "Requisitos específicos para descrição de fotografias e imagens estáticas."
+    mediaTypes:
+      - image/jpeg
+      - image/png
+      - image/webp
+    requiredMetadata:
+      - title
+      - description
+      - imageType
+      - resolution
+    families: [200]
+    conformanceLevel: "A"
+    license: "https://creativecommons.org/licenses/by/4.0/"
+
+  - id: ACL-800-PRF-003
+    name: "Accessibility Profile - Conteúdo Matemático"
+    namePt: "Perfil de Acessibilidade - Conteúdo Matemático"
+    description: "Requisitos para equações e notação matemática."
+    mediaTypes:
+      - application/pdf
+      - application/xhtml+xml
+    requiredMetadata:
+      - title
+      - description
+    families: [400]
+    conformanceLevel: "AA"
+    license: "https://creativecommons.org/licenses/by/4.0/"
+
+  - id: ACL-800-PRF-004
+    name: "Accessibility Profile - Gráfico Científico"
+    namePt: "Perfil de Acessibilidade - Gráfico Científico"
+    description: "Requisitos para gráficos de dados e diagramas científicos."
+    mediaTypes:
+      - image/png
+      - image/svg+xml
+      - application/pdf
+    requiredMetadata:
+      - title
+      - description
+      - chartType
+      - source
+    families: [300, 400]
+    conformanceLevel: "AA"
+    license: "https://creativecommons.org/licenses/by/4.0/"
+
+  - id: ACL-800-PRF-005
+    name: "Accessibility Profile - Captura de Tela"
+    namePt: "Perfil de Acessibilidade - Captura de Tela"
+    description: "Requisitos para descrição de interfaces e capturas de tela."
+    mediaTypes:
+      - image/png
+      - image/jpeg
+    requiredMetadata:
+      - title
+      - description
+      - imageType
+    families: [200]
+    conformanceLevel: "A"
+    license: "https://creativecommons.org/licenses/by/4.0/"
+
+  - id: ACL-800-PRF-006
+    name: "Accessibility Profile - Conteúdo STEM"
+    namePt: "Perfil de Acessibilidade - Conteúdo STEM"
+    description: "Requisitos para ciência, tecnologia, engenharia e matemática."
+    mediaTypes:
+      - application/pdf
+      - image/png
+      - image/svg+xml
+      - video/mp4
+    requiredMetadata:
+      - title
+      - description
+      - conformsTo
+    families: [300, 400, 500]
+    conformanceLevel: "AAA"
+    license: "https://creativecommons.org/licenses/by/4.0/"

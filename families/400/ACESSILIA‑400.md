@@ -7,7 +7,7 @@
 Aplica‑se a artigos científicos, teses, relatórios técnicos e revistas acadêmicas, independentemente do formato (PDF, HTML, LaTeX). Inclui abstracts, figuras, tabelas e compilações de dados.
 
 ## 2. Referências de Norma
-Principais referências: [ACESSILIA‑100](../../ACESSILIA-100.md), [ACM Digital Library](https://dl.acm.org/), DOI de obras, WG for metadata ([Dublin Core](https://www.dublincore.org/), [COAR](https://www.coar-repositories.org/)). As verificações **DEVEM** seguir [WCAG 2.2](https://www.w3.org/TR/WCAG22/) e [PDF/UA‑1](https://www.iso.org/standard/54268.html).
+Principais referências: [ACESSILIA‑100](../../ACESSILIA-100.md), [ACM Digital Library](https://dl.acm.org/), DOI de obras, WG for metadata ([Dublin Core](https://www.dublincore.org/), [COAR](https://www.coar-repositories.org/)). As verificações **DEVEM** seguir [WCAG 2.2](https://www.w3.org/TR/WCAG22/) e [PDF/UA‑1](https://www.iso.org/standard/64599.html).
 
 ## 3. Diretrizes Principais
 
@@ -80,5 +80,6 @@ Esta família aplica‑se a publicações científicas e técnicas revisadas por
 - **Gráficos e tabelas científicas** → aplicar também [ACESSILIA‑300](../300/ACESSILIA‑300.md).
 - **Figuras e imagens de artigos** → aplicar também [ACESSILIA‑200](../200/ACESSILIA‑200.md).
 - **Conteúdo multimídia** (vídeos explicativos, podcasts) → usar [ACESSILIA‑600](../600/ACESSILIA‑600.md).
+- **Declaração de conformidade e perfis** → usar [ACESSILIA‑800](../800/ACESSILIA‑800.md).
 
 A validação de DOI e acesso a dados **DEVE** depender de serviços externos (CrossRef, DataCite, Zenodo) e pode falhar por indisponibilidade temporária.

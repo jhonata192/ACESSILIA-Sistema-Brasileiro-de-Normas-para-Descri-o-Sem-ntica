@@ -7,13 +7,13 @@
 Aplica‑se a vídeos, animações, apresentações interativas, podcasts e conteúdos audiovisuais que demandam descrição acessível.
 
 ## 2. Referências de Norma
-Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminologia e auditabilidade. Em adição ao [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [DAISY 3.0](https://daisy.org/activities/standards/daisy-3/) e [EPUB 3](https://www.w3.org/TR/epub-33/) para multimídia acessível.
+Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminologia e auditabilidade. Em adição ao [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [DAISY 3.0](https://daisy.org/activities/standards/daisy/daisy-3/) e [EPUB 3](https://www.w3.org/TR/epub-33/) para multimídia acessível.
 
 ## 3. Diretrizes Principais
 
 | Código | Diretriz | Métrica de Avaliação | Comentário |
 |--------|----------|----------------------|------------|
-| ACL‑600‑MDM‑001 | **Narração** | 100 % do conteúdo multimídia **DEVEM** ter descrição textual da narrativa. | A descrição **DEVE** acompanhar a progressão temporal do conteúdo. |
+| ACL‑600‑MDM‑001 | **Narração** | 100 % do conteúdo multimídia **DEVE** ter descrição textual da narrativa. | A descrição **DEVE** acompanhar a progressão temporal do conteúdo. |
 | ACL‑600‑MDM‑002 | **Legendas** | 100 % dos conteúdos com áudio **DEVEM** incluir legendas sincronizadas. | Legendas **DEVEM** seguir padrão WebVTT ou SRT. |
 | ACL‑600‑MDM‑003 | **Áudio Descritivo** | Quando houver elementos visuais sem narração, áudio descritivo **DEVE** ser fornecido. | Campo `audioDescription` no metadata. |
 | ACL‑600‑MDM‑004 | **Controle Temporal** | 100 % dos marcadores temporais **DEVEM** usar formato ISO 8601. | Formato `HH:MM:SS.mmm`. |
@@ -40,7 +40,12 @@ Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminolo
   "subtitles": "https://exemplo.com/subtitles/tutorial-rede.vtt",
   "audioDescription": false,
   "transcript": "Bem-vindos ao tutorial de configuração de rede. Primeiro, acesse a interface do roteador pelo navegador...",
-  "license": "https://creativecommons.org/licenses/by/4.0/"
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "conformsTo": "EPUB Accessibility 1.1 - WCAG 2.2 Level AA",
+  "accessMode": ["textual", "visual", "auditory"],
+  "accessibilityFeature": ["captions", "audioDescription", "transcript"],
+  "accessibilityHazard": ["none"],
+  "accessibilitySummary": "This video includes synchronized captions, audio description, and a full text transcript."
 }
 ```
 
@@ -78,5 +83,6 @@ Esta família aplica‑se a conteúdos audiovisuais e multimídia. Os seguintes 
 - **Conteúdo científico ou educacional em vídeo** → aplicar também [ACESSILIA‑400](../400/ACESSILIA‑400.md) ou [ACESSILIA‑500](../500/ACESSILIA‑500.md).
 - **Conteúdo exclusivamente textual** → não requer descrição multimídia.
 - **Áudio sem componente visual** → a transcrição é suficiente; descrição narrativa é opcional.
+- **Declaração de conformidade e perfis** → usar [ACESSILIA‑800](../800/ACESSILIA‑800.md).
 
 A sincronização de legendas WebVTT/SRT **DEVE** ser validada ferramentalmente; a verificação manual é impraticável para conteúdos longos.
