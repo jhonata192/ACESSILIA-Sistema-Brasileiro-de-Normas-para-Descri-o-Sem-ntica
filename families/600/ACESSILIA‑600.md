@@ -33,15 +33,20 @@ Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminolo
 
 ```json
 {
+  "id": "ACL-600-MDM-001",
   "description": "Vídeo tutorial sobre configuração de rede",
   "language": "pt-BR",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "standard": "ACESSILIA 1.1.0",
+  "date": "2026-07-16T00:00:00Z",
+  "reviewStatus": "approved",
+  "familyId": 600,
   "mediaType": "video/mp4",
   "duration": "PT12M30S",
   "narrativeDescription": "O instrutor demonstra passo a passo a configuração de IP estático em um roteador, iniciando pelo acesso à interface web, seguido da inserção dos dados de rede e finalizando com o teste de conectividade.",
   "subtitles": "https://exemplo.com/subtitles/tutorial-rede.vtt",
   "audioDescription": false,
   "transcript": "Bem-vindos ao tutorial de configuração de rede. Primeiro, acesse a interface do roteador pelo navegador...",
-  "license": "https://creativecommons.org/licenses/by/4.0/",
   "conformsTo": "EPUB Accessibility 1.1 - WCAG 2.2 Level AA",
   "accessMode": ["textual", "visual", "auditory"],
   "accessibilityFeature": ["captions", "audioDescription", "transcript"],

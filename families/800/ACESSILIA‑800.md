@@ -7,7 +7,7 @@
 Define níveis de conformidade, perfis de acessibilidade e mecanismos de extensão do padrão ACESSILIA. Estabelece como implementações devem declarar conformidade e como novos perfis podem ser criados.
 
 ## 2. Referências de Norma
-Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminologia e auditabilidade. Em adição ao [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [EPUB 3](https://www.w3.org/TR/epub-33/), [PDF/UA‑1](https://www.iso.org/standard/64599.html), [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) e [Section 508](https://www.section508.gov/) para requisitos de acessibilidade. Referencia [ACESSILIA‑700](../700/ACESSILIA‑700.md) para critérios de validação.
+Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminologia e auditabilidade. Em adição ao [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [EPUB 3](https://www.w3.org/TR/epub-33/), [PDF/UA‑1](https://www.iso.org/standard/64599.html), [EN 301 549 v3.2.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) e [Section 508](https://www.section508.gov/) para requisitos de acessibilidade. Referencia [ACESSILIA‑700](../700/ACESSILIA‑700.md) para critérios de validação.
 
 ## 3. Diretrizes Principais
 
@@ -45,7 +45,49 @@ Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminolo
 | **ACESSILIA‑AA** | Level AA | WCAG Level AA conformance | Conformidade completa | Cláusulas 5–9 | §1194.41–42 |
 | **ACESSILIA‑AAA** | Level AAA | WCAG Level AAA conformance | Excedente | Cláusulas 5–12 | Excedente |
 
-### 4.4 Declaração de Conformidade
+### 4.4 Mapeamento Detalhado ACESSILIA → WCAG 2.2
+
+A tabela a seguir mapeia critérios específicos do ACESSILIA com as Success Criteria (SC) do WCAG 2.2 correspondentes, facilitando a rastreabilidade e auditoria de conformidade.
+
+| Critério ACESSILIA | Família | WCAG 2.2 SC | Nível WCAG | Descrição |
+|---------------------|---------|-------------|------------|-----------|
+| ACL‑200‑IMG‑001 | 200 | 1.1.1 Non-text Content | A | Descrição de imagens estáticas |
+| ACL‑200‑IMG‑002 | 200 | 1.1.1 Non-text Content | A | Inferência de emoções sem evidência |
+| ACL‑200‑IMG‑003 | 200 | 3.1.5 Reading Level | AAA | Voz ativa em descrições |
+| ACL‑200‑IMG‑004 | 200 | 1.3.2 Meaningful Sequence | A | Ordem espacial consistente |
+| ACL‑200‑IMG‑005 | 200 | 1.3.5 Identify Input Purpose | AA | Privacidade de dados pessoais |
+| ACL‑200‑IMG‑006 | 200 | 2.4.6 Headings and Labels | AA | Licenciamento de imagens |
+| ACL‑200‑IMG‑007 | 200 | 1.4.3 Contrast (Minimum) | AA | Contraste de luminância |
+| ACL‑300‑GRF‑001 | 300 | 1.1.1 Non-text Content | A | Fonte de dados em gráficos |
+| ACL‑300‑GRF‑002 | 300 | 1.1.1 Non-text Content | A | Legendas de eixos e rótulos |
+| ACL‑300‑GRF‑003 | 300 | 1.3.1 Info and Relationships | A | Tendências sem dados explícitos |
+| ACL‑300‑GRF‑004 | 300 | 1.3.2 Meaningful Sequence | A | Ordem lógica de leitura |
+| ACL‑300‑GRF‑005 | 300 | 1.4.1 Use of Color | A | Contraste de cores com significado |
+| ACL‑400‑SCI‑001 | 400 | 1.3.1 Info and Relationships | A | Resultados objetivos |
+| ACL‑400‑SCI‑002 | 400 | 2.4.4 Link Purpose (In Context) | A | Referências com DOI/URL |
+| ACL‑400‑SCI‑003 | 400 | 2.4.4 Link Purpose (In Context) | A | Acesso direto a dados |
+| ACL‑400‑SCI‑004 | 400 | 2.4.2 Page Titled | A | Rastreabilidade de publicação |
+| ACL‑500‑EDU‑001 | 500 | 2.4.2 Page Titled | A | Contexto pedagógico |
+| ACL‑500‑EDU‑002 | 500 | 3.1.5 Reading Level | AAA | Objetivos mensuráveis |
+| ACL‑500‑EDU‑003 | 500 | 1.3.2 Meaningful Sequence | A | Progressão lógica |
+| ACL‑500‑EDU‑004 | 500 | 1.1.1 Non-text Content | A | Exemplos e contra-exemplos |
+| ACL‑600‑MDM‑001 | 600 | 1.2.1 Audio-only and Video-only | A | Descrição de narrativa |
+| ACL‑600‑MDM‑002 | 600 | 1.2.2 Captions (Prerecorded) | A | Legendas sincronizadas |
+| ACL‑600‑MDM‑003 | 600 | 1.2.5 Audio Description | AA | Áudio descritivo |
+| ACL‑600‑MDM‑004 | 600 | 1.2.1 Audio-only and Video-only | A | Marcadores temporais ISO 8601 |
+| ACL‑600‑MDM‑005 | 600 | 1.2.1 Audio-only and Video-only | A | Transcrição completa |
+| ACL‑700‑VAL‑001 | 700 | 4.1.2 Name, Role, Value | A | Validação de esquema |
+| ACL‑700‑VAL‑002 | 700 | 4.1.2 Name, Role, Value | A | Validação de conteúdo |
+| ACL‑700‑VAL‑003 | 700 | 4.1.2 Name, Role, Value | A | Auditoria de privacidade |
+| ACL‑700‑VAL‑004 | 700 | 1.4.3 Contrast (Minimum) | AA | Teste de contraste |
+| ACL‑700‑VAL‑005 | 700 | 1.4.3 Contrast (Minimum) | AA | Conformidade de contraste |
+| ACL‑800‑PRF‑001 | 800 | N/A | N/A | Declaração de conformidade |
+| ACL‑800‑PRF‑002 | 800 | N/A | N/A | Lista de famílias |
+| ACL‑800‑PRF‑003 | 800 | N/A | N/A | Tipos MIME |
+| ACL‑800‑PRF‑004 | 800 | N/A | N/A | Metadados obrigatórios |
+| ACL‑800‑PRF‑005 | 800 | N/A | N/A | Documentação de extensões |
+
+### 4.5 Declaração de Conformidade
 
 Uma implementação **DEVE** atender integralmente aos critérios do nível declarado para usar a designação ACESSILIA‑A, ACESSILIA‑AA ou ACESSILIA‑AAA.
 

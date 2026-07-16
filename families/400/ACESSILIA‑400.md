@@ -31,13 +31,19 @@ Principais referências: [ACESSILIA‑100](../../ACESSILIA-100.md), [ACM Digital
 
 ```json
 {
-  "title": "Estudo de Eficácia no Uso de X em Y",
+  "id": "ACL-400-SCI-001",
+  "description": "Estudo de eficácia no uso de X em Y",
   "language": "pt-BR",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "standard": "ACESSILIA 1.1.0",
+  "date": "2026-07-16T00:00:00Z",
+  "reviewStatus": "approved",
+  "familyId": 400,
+  "title": "Estudo de Eficácia no Uso de X em Y",
   "author": ["João Silva"],
   "doi": "10.1234/abcd.efgh",
   "bibliography": ["10.1111/abcd.2015"],
   "dataAvailability": "https://doi.org/10.5281/zenodo.79455",
-  "license": "https://creativecommons.org/licenses/by/4.0/",
   "citationMetadata": {
     "publisher": "Journal of X",
     "version": "1.0",

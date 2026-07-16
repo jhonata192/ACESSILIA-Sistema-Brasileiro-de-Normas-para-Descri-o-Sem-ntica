@@ -38,15 +38,18 @@ O conteúdo **DEVE** seguir os princípios e terminologia definidos em [ACESSILI
 
 ```json
 {
+  "id": "ACL-200-IMG-001",
   "description": "Mesa de madeira com quatro cadeiras na sala de jantar, iluminada por lâmpada de teto, com foto de cromo e chapéu no gabinete.",
   "language": "pt-BR",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "standard": "ACESSILIA 1.1.0",
+  "date": "2026-07-16T00:00:00Z",
+  "reviewStatus": "approved",
+  "familyId": 200,
   "imageType": "image/jpeg",
   "resolution": "300dpi",
-  "license": "https://creativecommons.org/licenses/by/4.0/",
-  "metadata": {
-    "privacyNotice": false,
-    "contrastWarning": false
-  },
+  "privacyNotice": false,
+  "contrastWarning": false,
   "conformsTo": "EPUB Accessibility 1.1 - WCAG 2.2 Level AA",
   "accessMode": ["textual", "visual"],
   "accessibilityFeature": ["alternativeText", "readingOrder"],

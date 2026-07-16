@@ -33,18 +33,19 @@ Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminolo
 
 ```json
 {
+  "id": "ACL-300-GRF-001",
   "description": "Gráfico de barras com receita anual 2017‑2023, eixo X: anos, eixo Y: valores em R$",
   "language": "pt-BR",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "standard": "ACESSILIA 1.1.0",
+  "date": "2026-07-16T00:00:00Z",
+  "reviewStatus": "approved",
+  "familyId": 300,
   "chartType": "bar",
   "source": "Estatística Federal",
-  "license": "https://creativecommons.org/licenses/by/4.0/",
   "xAxis": {"label": "Ano", "values": [2017,2018,2019,2020,2021,2022,2023]},
   "yAxis": {"label": "Receita (R$)", "unit": "R$"},
-  "colors": {"blue": "receita", "green": "lucro"},
-  "metadata": {
-    "contrast": true,
-    "accessibilityGuide": "WCAG 2.2"
-  }
+  "colors": {"blue": "receita", "green": "lucro"}
 }
 ```
 

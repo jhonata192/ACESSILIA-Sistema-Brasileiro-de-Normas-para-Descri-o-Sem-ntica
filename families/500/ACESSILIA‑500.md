@@ -31,8 +31,14 @@ Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminolo
 
 ```json
 {
+  "id": "ACL-500-EDU-001",
   "description": "Apostila de introdução à programação para ensino médio",
   "language": "pt-BR",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "standard": "ACESSILIA 1.1.0",
+  "date": "2026-07-16T00:00:00Z",
+  "reviewStatus": "approved",
+  "familyId": 500,
   "educationalContext": {
     "theme": "Programação básica",
     "targetAudience": "Ensino médio",
@@ -46,8 +52,7 @@ Conforme [ACESSILIA‑100](../../ACESSILIA-100.md) para princípios de terminolo
   "examples": [
     {"type": "positive", "text": "Uma variável x = 5 armazena o número inteiro 5."},
     {"type": "negative", "text": "Uma variável x = 'cinco' mistura texto com número sem conversão."}
-  ],
-  "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+  ]
 }
 ```
 

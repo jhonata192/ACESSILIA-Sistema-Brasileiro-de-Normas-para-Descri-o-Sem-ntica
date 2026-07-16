@@ -1,6 +1,6 @@
 # ACESSILIA – Índice de Navegação
 
-> **Versão**: 1.0.1 · **Data**: 2026-07-14  
+> **Versão**: 1.1.0 · **Data**: 2026-07-16  
 > **RFC 2119/8174**: Todos os termos **DEVE**, **NÃO DEVE**, **PODE** e **RECOMENDA‑SE** seguem [RFC 2119](https://tools.ietf.org/html/rfc2119) e [RFC 8174](https://tools.ietf.org/html/rfc8174).
 
 ## Documentos Centrais
@@ -51,7 +51,7 @@
 | [WCAG 2.2](https://www.w3.org/TR/WCAG22/) | Acessibilidade web | 200, 300, 400, 500, 600 |
 | [EPUB 3](https://www.w3.org/TR/epub-33/) | Publicações acessíveis | 200, 300, 400, 500, 600 |
 | [PDF/UA-1](https://www.iso.org/standard/64599.html) | Documentos PDF acessíveis | 200, 300, 400, 500 |
-| [EN 301 549 v3.3.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.03.01_60/en_301549v030301p.pdf) | Requisitos europeus | Todas |
+| [EN 301 549 v3.2.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) | Requisitos europeus | Todas |
 | [Section 508](https://www.section508.gov/) | Acessibilidade governamental (EUA) | Todas |
 
 ## Fluxo de Revisão

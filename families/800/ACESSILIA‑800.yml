@@ -39,13 +39,14 @@ profiles:
   - id: ACL-800-PRF-003
     name: "Accessibility Profile - Conteúdo Matemático"
     namePt: "Perfil de Acessibilidade - Conteúdo Matemático"
-    description: "Requisitos para equações e notação matemática."
+    description: "Requisitos para equações e notação matemática acessível."
     mediaTypes:
-      - application/pdf
       - application/xhtml+xml
+      - application/pdf
     requiredMetadata:
       - title
       - description
+      - language
     families: [400]
     conformanceLevel: "AA"
     license: "https://creativecommons.org/licenses/by/4.0/"
@@ -63,6 +64,8 @@ profiles:
       - description
       - chartType
       - source
+      - xAxis
+      - yAxis
     families: [300, 400]
     conformanceLevel: "AA"
     license: "https://creativecommons.org/licenses/by/4.0/"
@@ -78,6 +81,7 @@ profiles:
       - title
       - description
       - imageType
+      - resolution
     families: [200]
     conformanceLevel: "A"
     license: "https://creativecommons.org/licenses/by/4.0/"
@@ -87,14 +91,17 @@ profiles:
     namePt: "Perfil de Acessibilidade - Conteúdo STEM"
     description: "Requisitos para ciência, tecnologia, engenharia e matemática."
     mediaTypes:
+      - application/xhtml+xml
       - application/pdf
       - image/png
       - image/svg+xml
-      - video/mp4
     requiredMetadata:
       - title
       - description
-      - conformsTo
+      - language
+      - chartType
+      - source
+      - educationalContext
     families: [300, 400, 500]
-    conformanceLevel: "AAA"
+    conformanceLevel: "AA"
     license: "https://creativecommons.org/licenses/by/4.0/"

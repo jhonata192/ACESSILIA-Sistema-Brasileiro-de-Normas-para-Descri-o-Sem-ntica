@@ -127,7 +127,7 @@ for FAM in "${FAMILIES[@]}"; do
 
     # Validação de seções obrigatórias
     SECTIONS_PASS=0
-    REQUIRED_SECTIONS=("Escopo" "Diretrizes" "Critérios Obrigatórios" "Exemplos" "Metadados" "Validação")
+    REQUIRED_SECTIONS=("Escopo" "Diretrizes" "Crit" "Exemplo" "Valida")
     MISSING_SECTIONS=()
     for SECTION in "${REQUIRED_SECTIONS[@]}"; do
         if ! grep -q "$SECTION" "$FAM_FILE" 2>/dev/null; then

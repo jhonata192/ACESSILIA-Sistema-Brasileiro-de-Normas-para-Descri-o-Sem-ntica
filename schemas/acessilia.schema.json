@@ -25,13 +25,14 @@
         "datePublished": { "type": "string", "format": "date" },
         "author": { "type": "string" }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     }
   },
   "properties": {
     "id": {
       "type": "string",
-      "description": "Unique identifier for the description (UUID or ACL-FAM-TIPO-NNN format)."
+      "description": "Unique identifier for the description (UUID or ACL-FAM-TIPO-NNN format).",
+      "pattern": "^(ACL-[0-9]{3}-[A-Z]{3}-[0-9]{3}|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$"
     },
     "description": {
       "type": "string",
@@ -47,7 +48,7 @@
     },
     "standard": {
       "type": "string",
-      "description": "Standard name and version (e.g., 'ACESSILIA 1.0')."
+      "description": "Standard name and version (e.g., 'ACESSILIA 1.1.0')."
     },
     "date": {
       "type": "string",
@@ -90,7 +91,7 @@
     "metadata": {
       "type": "object",
       "description": "Optional nested metadata object (flat structure preferred).",
-      "additionalProperties": true
+      "additionalProperties": false
     },
     "privacyNotice": {
       "type": "boolean",
@@ -260,5 +261,96 @@
     }
   },
   "required": ["id", "description", "language", "license", "standard", "date", "reviewStatus"],
+  "allOf": [
+    {
+      "if": {
+        "properties": { "familyId": { "const": 200 } }
+      },
+      "then": {
+        "properties": {
+          "imageType": { "type": "string" },
+          "resolution": { "type": "string" },
+          "privacyNotice": { "type": "boolean" },
+          "contrastWarning": { "type": "boolean" }
+        },
+        "required": ["imageType", "resolution"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "familyId": { "const": 300 } }
+      },
+      "then": {
+        "properties": {
+          "chartType": { "type": "string" },
+          "source": { "type": "string" },
+          "xAxis": { "type": "object" },
+          "yAxis": { "type": "object" },
+          "colors": { "type": "object" }
+        },
+        "required": ["chartType", "source"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "familyId": { "const": 400 } }
+      },
+      "then": {
+        "properties": {
+          "title": { "type": "string" },
+          "author": { "type": "array" },
+          "doi": { "type": "string" },
+          "bibliography": { "type": "array" },
+          "dataAvailability": { "type": "string" },
+          "citationMetadata": { "$ref": "#/definitions/citationMetadata" }
+        },
+        "required": ["title", "author"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "familyId": { "const": 500 } }
+      },
+      "then": {
+        "properties": {
+          "educationalContext": { "$ref": "#/definitions/educationalContext" },
+          "learningObjectives": { "type": "array" },
+          "sequence": { "type": "array" },
+          "examples": { "type": "array" }
+        },
+        "required": ["educationalContext", "learningObjectives"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "familyId": { "const": 600 } }
+      },
+      "then": {
+        "properties": {
+          "mediaType": { "type": "string" },
+          "duration": { "type": "string" },
+          "narrativeDescription": { "type": "string" },
+          "subtitles": { "type": "string" },
+          "audioDescription": { "type": "boolean" },
+          "transcript": { "type": "string" }
+        },
+        "required": ["mediaType", "duration"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "familyId": { "const": 800 } }
+      },
+      "then": {
+        "properties": {
+          "conformanceLevel": { "type": "string", "enum": ["A", "AA", "AAA"] },
+          "profiles": { "type": "array" },
+          "mediaTypes": { "type": "array" },
+          "requiredMetadata": { "type": "array" }
+        },
+        "required": ["conformanceLevel"]
+      }
+    }
+  ],
   "additionalProperties": true
 }
